@@ -19,27 +19,26 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="“资源评价”模块主要是对地热储层进行简单的地质建模并计算地热资源量。">
+  <meta name="description" content="“ORC地热发电”模块主要是计算地热发电仿真计算。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="地热计算器——“资源评价”模块操作介绍">
-<meta property="og:url" content="http://example.com/2021/03/15/%E5%9C%B0%E7%83%AD%E8%AE%A1%E7%AE%97%E5%99%A8%E2%80%94%E2%80%94%E2%80%9C%E8%B5%84%E6%BA%90%E8%AF%84%E4%BB%B7%E2%80%9D%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9C%E4%BB%8B%E7%BB%8D/index.html">
+<meta property="og:title" content="地热计算器——“ORC地热发电”模块操作介绍">
+<meta property="og:url" content="http://example.com/2022/10/12/%E5%9C%B0%E7%83%AD%E8%AE%A1%E7%AE%97%E5%99%A8%E2%80%94%E2%80%94%E2%80%9CORC%E5%9C%B0%E7%83%AD%E5%8F%91%E7%94%B5%E2%80%9D%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9C%E4%BB%8B%E7%BB%8D/index.html">
 <meta property="og:site_name" content="地热计算器">
-<meta property="og:description" content="“资源评价”模块主要是对地热储层进行简单的地质建模并计算地热资源量。">
+<meta property="og:description" content="“ORC地热发电”模块主要是计算地热发电仿真计算。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xiaomingtian-1.github.io/photo_website/appraisal_1.png">
-<meta property="og:image" content="https://xiaomingtian-1.github.io/photo_website/appraisal_2.png">
-<meta property="og:image" content="https://xiaomingtian-1.github.io/photo_website/appraisal_3.png">
-<meta property="og:image" content="https://xiaomingtian-1.github.io/photo_website/appraisal_4.png">
-<meta property="og:image" content="https://xiaomingtian-1.github.io/photo_website/appraisal_5.png">
-<meta property="og:image" content="https://xiaomingtian-1.github.io/photo_website/appraisal_6.png">
-<meta property="article:published_time" content="2021-03-15T03:37:01.000Z">
-<meta property="article:modified_time" content="2021-04-05T13:19:15.922Z">
+<meta property="og:image" content="https://xiaomingtian-1.github.io/photo_website/ORC_1.png">
+<meta property="og:image" content="https://xiaomingtian-1.github.io/photo_website/ORC_2.png">
+<meta property="og:image" content="https://xiaomingtian-1.github.io/photo_website/ORC_3.png">
+<meta property="og:image" content="https://xiaomingtian-1.github.io/photo_website/ORC_4.png">
+<meta property="og:image" content="https://xiaomingtian-1.github.io/photo_website/ORC_5.png">
+<meta property="article:published_time" content="2022-10-12T03:23:10.000Z">
+<meta property="article:modified_time" content="2024-10-12T03:35:13.300Z">
 <meta property="article:author" content="田小明(Xiaoming Tian)">
 <meta property="article:tag" content="软件实操">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://xiaomingtian-1.github.io/photo_website/appraisal_1.png">
+<meta name="twitter:image" content="https://xiaomingtian-1.github.io/photo_website/ORC_1.png">
 
-<link rel="canonical" href="http://example.com/2021/03/15/%E5%9C%B0%E7%83%AD%E8%AE%A1%E7%AE%97%E5%99%A8%E2%80%94%E2%80%94%E2%80%9C%E8%B5%84%E6%BA%90%E8%AF%84%E4%BB%B7%E2%80%9D%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9C%E4%BB%8B%E7%BB%8D/">
+<link rel="canonical" href="http://example.com/2022/10/12/%E5%9C%B0%E7%83%AD%E8%AE%A1%E7%AE%97%E5%99%A8%E2%80%94%E2%80%94%E2%80%9CORC%E5%9C%B0%E7%83%AD%E5%8F%91%E7%94%B5%E2%80%9D%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9C%E4%BB%8B%E7%BB%8D/">
 
 
 <script id="page-configurations">
@@ -52,7 +51,7 @@
   };
 </script>
 
-  <title>地热计算器——“资源评价”模块操作介绍 | 地热计算器</title>
+  <title>地热计算器——“ORC地热发电”模块操作介绍 | 地热计算器</title>
   
 
 
@@ -168,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/15/%E5%9C%B0%E7%83%AD%E8%AE%A1%E7%AE%97%E5%99%A8%E2%80%94%E2%80%94%E2%80%9C%E8%B5%84%E6%BA%90%E8%AF%84%E4%BB%B7%E2%80%9D%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9C%E4%BB%8B%E7%BB%8D/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/12/%E5%9C%B0%E7%83%AD%E8%AE%A1%E7%AE%97%E5%99%A8%E2%80%94%E2%80%94%E2%80%9CORC%E5%9C%B0%E7%83%AD%E5%8F%91%E7%94%B5%E2%80%9D%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9C%E4%BB%8B%E7%BB%8D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -181,7 +180,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          地热计算器——“资源评价”模块操作介绍
+          地热计算器——“ORC地热发电”模块操作介绍
         </h1>
 
         <div class="post-meta">
@@ -191,14 +190,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-03-15 11:37:01" itemprop="dateCreated datePublished" datetime="2021-03-15T11:37:01+08:00">2021-03-15</time>
+              <time title="创建时间：2022-10-12 11:23:10" itemprop="dateCreated datePublished" datetime="2022-10-12T11:23:10+08:00">2022-10-12</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-05 21:19:15" itemprop="dateModified" datetime="2021-04-05T21:19:15+08:00">2021-04-05</time>
+                <time title="修改时间：2024-10-12 11:35:13" itemprop="dateModified" datetime="2024-10-12T11:35:13+08:00">2024-10-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -211,7 +210,7 @@
             </span>
 
           
-            <div class="post-description">“资源评价”模块主要是对地热储层进行简单的地质建模并计算地热资源量。</div>
+            <div class="post-description">“ORC地热发电”模块主要是计算地热发电仿真计算。</div>
 
         </div>
       </header>
@@ -222,22 +221,99 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>本模块由汪胜和田小明开发。</p>
+        <p>本模块由于淼，田小明，孟博言，陈超凡开发。</p>
 <h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><ol>
-<li><p>双击“地热计算器”图标，启动软件<br><img src="https://xiaomingtian-1.github.io/photo_website/appraisal_1.png" alt="appraisal_1"></p>
+<li><p>双击“地热计算器”图标，启动软件，如图所示：<br><img src="https://xiaomingtian-1.github.io/photo_website/ORC_1.png" alt="DBHE_1"></p>
 </li>
-<li><p>点击“计算模块”-“资源评价”，新建项目或打开项目<br><img src="https://xiaomingtian-1.github.io/photo_website/appraisal_2.png" alt="appraisal_2"><br>点击“新建项目”或“打开项目”按钮后，就会弹出资源评价窗体。</p>
+<li><p>点击“计算模块”-“ORC地热发电”。</p>
 </li>
-<li><p>资源评价窗体介绍<br><img src="https://xiaomingtian-1.github.io/photo_website/appraisal_3.png" alt="appraisal_3"><br>如图所示，资源评价窗体包括三个部分，分别是参数设置栏、功能栏、结果输出栏。用户需要在参数设置栏里面输入相关参数和选择计算方法。</p>
+<li><p>输入参数<br><img src="https://xiaomingtian-1.github.io/photo_website/ORC_2.png" alt="DBHE_2"><br>首先输入地热热源侧参数，包括井口温度、井口压力、地热流体干度、地热流体流量、回灌温度、回灌压力；然后输入热力循环侧参数，包括蒸发温度、冷凝温度、过热度；最后输入系统参数，包括年运行小时数，并点选工质。需要确保所有输入值的单位与系统要求一致。<br>通过点击“缺省值”按钮，可以自动填入系统默认参数值，注意点击“缺省值”按钮会覆盖当前参数输入值，点击“缺省值”按钮前，请确认是否要覆盖当前输入值。</p>
 </li>
-<li><p>参数设置栏介绍<br>(1) 点击“设置储层参数”按钮来设置储层信息<br><img src="https://xiaomingtian-1.github.io/photo_website/appraisal_4.png" alt="appraisal_4"></p>
+<li><p>计算</p>
+<p>点击“仿真计算”按钮，自动计算ORC地热发电系统关键性能指标，仿真计算结果以表格形式在右侧结果框中输出，如下图所示。</p>
+<p><img src="https://xiaomingtian-1.github.io/photo_website/ORC_3.png" alt="DBHE_3"></p>
 </li>
 </ol>
-<p><strong>手动输入数据，或者更改数据后，一定要点击“提交数据”按钮，否则数据没有录入。</strong><br>(2) 点击“添加岩层信息”按钮来设置岩层信息<br><img src="https://xiaomingtian-1.github.io/photo_website/appraisal_5.png" alt="appraisal_5"><br>岩层信息设置界面，用户既可以通过导入提前准备好的岩层数据（csv格式），也可以通过“增加行”和“删除行”按钮来手动输入和修改岩层数据。<strong>手动输入数据，或者更改数据后，一定要点击“提交数据”按钮，否则数据没有录入。</strong></p>
-<ol start="5">
-<li>功能栏介绍<br>功能栏主要包括计算热储量、绘制柱状图三个功能。<br>(1)    点击“计算热储量”按钮来计算热储资源量<br>计算结果Results(项目名).csv文件会保存在当前项目文件夹下。<br>(2) 点击“绘制柱状图”按钮绘制柱状图<br><img src="https://xiaomingtian-1.github.io/photo_website/appraisal_6.png" alt="appraisal_6"></li>
-</ol>
-<h1 id="原理说明"><a href="#原理说明" class="headerlink" title="原理说明"></a>原理说明</h1><p>略。详见软件使用手册。</p>
+<h1 id="原理说明"><a href="#原理说明" class="headerlink" title="原理说明"></a>原理说明</h1><p>   地热能驱动的有机朗肯循环（ORC）发电系统原理。<br>   热源侧：采用地热能作为系统热源，地热流体（S0）由开采井中的潜水泵提升至井口(S1)，经旋流除砂器(S2)，进入蒸发器中放热，放热后的低能位地热流体(S6)经由回灌井回灌至地下。注意地热流体允许为汽水混合物。<br>   热力学循环侧：有机工质(WF0)经工质泵绝热压缩为高压的过冷态流体(WF2)，后在蒸发器中定压吸热，由过冷态转变为饱和液态(WF4)，继续吸热至两相态，后转变为饱和气态(WF5)，最终在蒸发器出口达到过热态(WF6)。过热流体在汽轮机中膨胀做功，推动汽轮机转动，汽轮机的功量由联轴器传导至发电机，带动发电机发电。做功后的乏汽(WF7)在冷凝器中冷凝为饱和液态(WF0)，完成一个热力学循环。<br>   冷源侧：冷源侧采用间接冷却的方式，冷却循环水在冷凝器中与有机工质换热吸收热量，在冷却塔中与空气换热放出热量，冷却水循环由冷却水循环泵推动。<br>   计算控制点位如热力系统图和温熵图所示。<br>   原则性热力系统图</p>
+<p>   <img src="https://xiaomingtian-1.github.io/photo_website/ORC_4.png" alt="DBHE_4"></p>
+<p>   温熵图</p>
+<p>   <img src="https://xiaomingtian-1.github.io/photo_website/ORC_5.png" alt="DBHE_4"></p>
+<h1 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h1><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>单位</th>
+<th>属性</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>井口温度</td>
+<td>℃</td>
+<td>必须赋值：大于0的数</td>
+<td>115</td>
+</tr>
+<tr>
+<td>井口压力</td>
+<td>bar</td>
+<td>必须赋值：大于0的数，绝对压力</td>
+<td>6</td>
+</tr>
+<tr>
+<td>地热流体干度</td>
+<td>kg/kg</td>
+<td>必须赋值：0~1之间的数</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td>地热流体流量</td>
+<td>ton/h</td>
+<td>必须赋值：大于0的数</td>
+<td>80</td>
+</tr>
+<tr>
+<td>回灌温度</td>
+<td>℃</td>
+<td>必须赋值：大于0的数</td>
+<td>80</td>
+</tr>
+<tr>
+<td>回灌压力</td>
+<td>bar</td>
+<td>必须赋值：大于0的数，绝对压力</td>
+<td>2</td>
+</tr>
+<tr>
+<td>蒸发温度</td>
+<td>℃</td>
+<td>必须赋值：大于0的数</td>
+<td>85</td>
+</tr>
+<tr>
+<td>冷凝温度</td>
+<td>℃</td>
+<td>必须赋值：大于0的数</td>
+<td>45</td>
+</tr>
+<tr>
+<td>过热度</td>
+<td>℃</td>
+<td>必须赋值：大于0的数</td>
+<td>2</td>
+</tr>
+<tr>
+<td>年运行小时数</td>
+<td>h</td>
+<td>必须赋值：0~8760之间的数</td>
+<td>8000</td>
+</tr>
+<tr>
+<td>工质</td>
+<td>-</td>
+<td>必须赋值：选择相应工质名</td>
+<td>R245fa</td>
+</tr>
+</tbody></table>
 
     </div>
 
@@ -295,12 +371,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/15/%E5%9C%B0%E7%83%AD%E8%AE%A1%E7%AE%97%E5%99%A8%E2%80%94%E2%80%94%E2%80%9C%E4%BA%95%E8%B7%9D%E4%BC%98%E5%8C%96%E2%80%9D%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9C%E4%BB%8B%E7%BB%8D/" rel="prev" title="地热计算器——“井距优化”模块操作介绍">
-      <i class="fa fa-chevron-left"></i> 地热计算器——“井距优化”模块操作介绍
+    <a href="/2022/08/28/%E5%9C%B0%E7%83%AD%E8%AE%A1%E7%AE%97%E5%99%A8%E2%80%94%E2%80%94%E2%80%9C%E4%BA%8C%E6%B0%A7%E5%8C%96%E7%A2%B3%E5%87%8F%E6%8E%92%E9%87%8F%E8%AE%A1%E7%AE%97%E2%80%9D%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9C%E4%BB%8B%E7%BB%8D/" rel="prev" title="地热计算器——“二氧化碳减排量计算”模块操作介绍">
+      <i class="fa fa-chevron-left"></i> 地热计算器——“二氧化碳减排量计算”模块操作介绍
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/03/15/%E5%9C%B0%E7%83%AD%E8%AE%A1%E7%AE%97%E5%99%A8%E2%80%94%E2%80%94%E2%80%9C%E6%B5%85%E5%B1%82%E5%9C%B0%E7%83%AD%E2%80%9D%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9C%E4%BB%8B%E7%BB%8D/" rel="next" title="地热计算器——“浅层地热”模块操作介绍">
-      地热计算器——“浅层地热”模块操作介绍 <i class="fa fa-chevron-right"></i>
+    <a href="/2023/09/01/%E5%9C%B0%E7%83%AD%E8%AE%A1%E7%AE%97%E5%99%A8%E2%80%94%E2%80%94%E2%80%9C%E9%9D%99%E6%80%81%E5%9C%B0%E5%B1%82%E6%B8%A9%E5%BA%A6%E9%A2%84%E6%B5%8B%E2%80%9D%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9C%E4%BB%8B%E7%BB%8D/" rel="next" title="地热计算器——“静态地层温度预测”模块操作介绍">
+      地热计算器——“静态地层温度预测”模块操作介绍 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -360,7 +436,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">使用说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E7%90%86%E8%AF%B4%E6%98%8E"><span class="nav-number">2.</span> <span class="nav-text">原理说明</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">使用说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E7%90%86%E8%AF%B4%E6%98%8E"><span class="nav-number">2.</span> <span class="nav-text">原理说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="nav-number">3.</span> <span class="nav-text">参数说明</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
